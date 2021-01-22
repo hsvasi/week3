@@ -32,6 +32,61 @@ let promotion3Icon          // expects a String (emoji)
 
 function pageLoad() {
   // 👇 YOUR CODE BEGINS HERE. DON'T CHANGE ANY OTHER CODE. 👇
+   numberOfProducts = database.products.length
+   products = database.products
+   
+   let promotionSize = database.promotions.length - 1
+   console.log(promotionSize)
+
+   let promotion1postion = getRandomInt(promotionSize)
+   let promotion2postion = getRandomInt(promotionSize)
+   let promotion3postion = getRandomInt(promotionSize)
+   
+
+   console.log(promotion1postion)
+   console.log(promotion2postion)
+   console.log(promotion3postion)
+
+   promotion1Description = database.promotions[promotion1postion].description
+   promotion2Description = database.promotions[promotion2postion].description
+   promotion3Description = database.promotions[promotion3postion].description
+   
+   console.log(promotion1Description)
+   console.log(promotion2Description)
+   console.log(promotion3Description)
+
+
+  if (database.promotions[promotion1postion].type == "discount"){
+    promotion1Icon = "DISCOUNT!! "
+  }else if(database.promotions[promotion1postion].type == "shipping"){
+    promotion1Icon = "SHIPPING!! "
+  }else if(database.promotions[promotion1postion].type == "contest"){
+    promotion1Icon = "CONTEST!! "
+  }else{
+
+  }
+
+  if (database.promotions[promotion2postion].type == "discount"){
+    promotion2Icon = "DISCOUNT!! "
+  }else if(database.promotions[promotion2postion].type == "shipping"){
+    promotion2Icon = "SHIPPING!! "
+  }else if(database.promotions[promotion2postion].type == "contest"){
+    promotion2Icon = "CONTEST!! "
+  }else{
+
+  }
+
+  if (database.promotions[promotion3postion].type == "discount"){
+    promotion3Icon = "DISCOUNT!! "
+  }else if(database.promotions[promotion3postion].type == "shipping"){
+    promotion3Icon = "SHIPPING!! "
+  }else if(database.promotions[promotion3postion].type == "contest"){
+    promotion3Icon = "CONTEST!! "
+  }else{
+
+  }
+
+
 
   // 🔥🔥🔥 YOUR CODE GOES HERE 🔥🔥🔥
   console.log(database)

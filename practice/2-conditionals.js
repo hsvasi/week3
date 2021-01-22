@@ -12,7 +12,16 @@ function pageLoad() {
   let output
 
   // 👇 YOUR CODE BEGINS HERE. DON'T CHANGE ANY OTHER CODE. 👇
-  
+   if (total == 7 || total == 11){
+     output = 'Natural Winner'
+   }
+   else if (total == 2 || total == 3 || total == 12){
+     output = 'You Lose'
+   }else{
+     output = 'The point is ' + total
+   }
+
+
   // 🔥 YOUR CODE GOES HERE. 🔥
   // the value of the variable 'output' is already set to display on the page
   // write an if.. else if.. else statement to evaluate the value of 'total'
